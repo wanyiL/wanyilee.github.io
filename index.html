@@ -116,6 +116,16 @@
             font-weight: bold;
             font-size: 1.1em;
             color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .company-icon {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            border-radius: 4px;
         }
         
         .item-date {
@@ -226,7 +236,7 @@
 <body>
     <div class="container">
         <header>
-            <img src="profile.png" alt="Wan-Yi Lee" class="profile-photo">
+            <img src="profile.jpg" alt="Wan-Yi Lee" class="profile-photo">
             <h1>Wan-Yi Lee</h1>
             <p class="subtitle">Analog/Mixed-Signal IC Designer & Researcher</p>
             <div class="contact-info">
@@ -260,20 +270,7 @@
             </div>
         </section>
 
-        <section class="section">
-            <h2>Standardized Tests</h2>
-            <div class="test-scores">
-                <div class="test-score">
-                    <div class="score-label">GRE (Sep 2024)</div>
-                    <div class="score-value">V: 162 | Q: 170</div>
-                </div>
-                <div class="test-score">
-                    <div class="score-label">TOEFL (Sep 2025)</div>
-                    <div class="score-value">109/120</div>
-                    <div style="font-size: 0.9em; margin-top: 5px;">R:26 | L:30 | W:24 | S:29</div>
-                </div>
-            </div>
-        </section>
+    
 
         <section class="section">
             <h2>Publication</h2>
@@ -286,7 +283,10 @@
             <h2>Work Experience</h2>
             <div class="experience-item">
                 <div class="item-header">
-                    <span class="item-title">MediaTek</span>
+                    <span class="item-title">
+                        <img src="mediatek-logo.webp" alt="MediaTek" class="company-icon">
+                        MediaTek
+                    </span>
                     <span class="item-date">Jun 2025 – Aug 2025</span>
                 </div>
                 <p class="item-subtitle">Summer Intern, Radio System Solutions Department</p>
