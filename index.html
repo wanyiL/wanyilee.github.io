@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wan-Yi Lee | Analog/Mixed-Signal IC Designer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: #764ba2;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .education-item, .experience-item, .project-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #764ba2;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+        }
+        
+        .item-date {
+            color: #666;
+            font-style: italic;
+        }
+        
+        .item-subtitle {
+            color: #764ba2;
+            margin-bottom: 8px;
+        }
+        
+        .publication {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            font-style: italic;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-top: 3px solid #667eea;
+        }
+        
+        .skill-category h3 {
+            color: #764ba2;
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+        
+        .awards {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .award-item {
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        
+        .test-scores {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .test-score {
+            background: #f8f9fa;
+            padding: 15px 25px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .test-score .score-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .test-score .score-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-top: 5px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Wan-Yi Lee</h1>
+            <p class="subtitle">Analog/Mixed-Signal IC Designer & Researcher</p>
+            <div class="contact-info">
+                <span>📍 Taipei, Taiwan</span>
+                <a href="mailto:b11507004@ntu.edu.tw">📧 b11507004@ntu.edu.tw</a>
+                <a href="mailto:wanyilee93@gmail.com">📧 wanyilee93@gmail.com</a>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>About Me</h2>
+            <p>I am an Electrical Engineering undergraduate at National Taiwan University, specializing in Analog/Mixed-Signal IC Design with published research in chaotic circuits. My expertise spans designing high-performance PLLs, oscillators, and PGAs across various CMOS processes. I am passionate about leveraging deep circuit expertise to solve complex challenges in semiconductor innovation.</p>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="item-header">
+                    <span class="item-title">National Taiwan University</span>
+                    <span class="item-date">Sep 2023 – Present</span>
+                </div>
+                <p class="item-subtitle">BS in Electrical Engineering</p>
+                <p><strong>GPA:</strong> 4.03/4.3</p>
+            </div>
+            <div class="education-item">
+                <div class="item-header">
+                    <span class="item-title">National Taiwan University</span>
+                    <span class="item-date">Sep 2022 – Jun 2023</span>
+                </div>
+                <p class="item-subtitle">BS in Material Science and Engineering</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Standardized Tests</h2>
+            <div class="test-scores">
+                <div class="test-score">
+                    <div class="score-label">GRE (Sep 2024)</div>
+                    <div class="score-value">V: 162 | Q: 170</div>
+                </div>
+                <div class="test-score">
+                    <div class="score-label">TOEFL (Sep 2025)</div>
+                    <div class="score-value">109/120</div>
+                    <div style="font-size: 0.9em; margin-top: 5px;">R:26 | L:30 | W:24 | S:29</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Publication</h2>
+            <div class="publication">
+                <strong>Wan-Yi Lee</strong> and Tai-Cheng Lee. "A Double Negative Gm-based LC Chaotic circuit for a Random Number Generator", <em>IEEE, International SoC Design Conference (ISOCC), 2025.</em>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="item-title">MediaTek</span>
+                    <span class="item-date">Jun 2025 – Aug 2025</span>
+                </div>
+                <p class="item-subtitle">Summer Intern, Radio System Solutions Department</p>
+                <ul>
+                    <li>Designed a programmable gain amplifier (PGA) circuit under a 12-nm FinFET process, maintaining robust performance under all-corner simulation</li>
+                    <li>Optimized circuit reliability by architecting a common-mode deadlock prevention structure</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Analog & Mixed-Signal IC Research</h2>
+            
+            <div class="project-item">
+                <div class="item-header">
+                    <span class="item-title">Phase-Locked Loop (PLL) Design</span>
+                    <span class="item-date">Sep 2025 – Present</span>
+                </div>
+                <p class="item-subtitle">Advisor: Prof. Tsung-Hsien Lin</p>
+                <ul>
+                    <li>Designed a Master-Slave Sampling Filter (MSSF) PLL in a 180-nm TSMC process</li>
+                    <li>Developing a novel multi-phase MSSF topology to investigate behavior on bandwidth and acquisition range</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="item-header">
+                    <span class="item-title">Chua's Circuit Design with Negative gₘ Cell</span>
+                    <span class="item-date">Feb 2025 – Oct 2025</span>
+                </div>
+                <p class="item-subtitle">Advisor: Prof. Tai-Cheng Lee</p>
+                <ul>
+                    <li>Innovated a chaotic circuit architecture, combining an LC-tank and parallel cross-coupled gₘ cell under 28-nm TSMC process</li>
+                    <li>The circuit achieves a 2.5-Gb/s bit rate with verified randomness</li>
+                    <li><strong>Accepted and presented at IEEE, ISOCC 2025</strong></li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="item-header">
+                    <span class="item-title">RC Relaxation Oscillator Design</span>
+                    <span class="item-date">Feb 2025 – Jun 2025</span>
+                </div>
+                <p class="item-subtitle">Advisor: Prof. Tsung-Hsien Lin</p>
+                <ul>
+                    <li>Designed a novel single-ended RC swing-boosted relaxation oscillator with 10.22-MHz frequency under 180-nm TSMC process</li>
+                    <li>Achieved 50% power reduction compared to prior art while maintaining phase noise performance, resulting in a FOM of 159.4 dBc/Hz at 1 kHz and 160.3 dBc/Hz at 100 kHz offset</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="item-header">
+                    <span class="item-title">Continuous Time Linear Equalizer (CTLE) Design</span>
+                    <span class="item-date">Sep 2024 – Jul 2025</span>
+                </div>
+                <p class="item-subtitle">Advisor: Prof. Shen-Iuan Liu</p>
+                <ul>
+                    <li>Designed the current mode logic (CML) CTLE and inverter-based CTLE under 28-nm TSMC process</li>
+                    <li>Optimized eye-width and AC response through transistor sizing and structure analysis</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="item-header">
+                    <span class="item-title">2 Stage-Amplifier Design</span>
+                    <span class="item-date">Sep 2024 – Dec 2024</span>
+                </div>
+                <p class="item-subtitle">Advisor: Prof. Tsung-Hsien Lin</p>
+                <ul>
+                    <li>Designed three forms of operational transconductance amplifiers: two-stage structure, current mirror, and current shunt structure</li>
+                    <li>Optimized design to reach specifications including gain, stability, bandwidth, and power</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Digital IC Research</h2>
+            <div class="project-item">
+                <div class="item-header">
+                    <span class="item-title">Deep Learning Inference Accelerator Design</span>
+                    <span class="item-date">Feb 2025 – Present</span>
+                </div>
+                <p class="item-subtitle">Advisor: Prof. Yi-Chang Lu</p>
+                <ul>
+                    <li>Implemented a parallel-processing multiply-and-accumulate (MAC) unit and Post-Processing unit (PPU) in Verilog, verified function with a self-written test-bench</li>
+                    <li>Executed synthesis and APR process under 130-nm TSMC process, passing the post-layout simulation</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Analog/Mixed-Signal Design</h3>
+                    <p>Cadence Virtuoso ADE/Layout XL/Spectre, Hspice, Pspice</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Digital Design & Synthesis</h3>
+                    <p>Verilog, Synopsys Design Vision, Synopsys Innovus</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming & Data Analysis</h3>
+                    <p>Python, C/C++, MATLAB</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Hardware & Testing</h3>
+                    <p>Soldering, Oscilloscope, Vector Network Analyzer</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Awards & Certifications</h2>
+            <div class="awards">
+                <div class="award-item">🏆 Fu Bell Scholarship (Top Freshman Award) | National Taiwan University (Nov 2022)</div>
+                <div class="award-item">⭐ IEMPT-Excellent | Taiwan Electromagnetic Industry-Academia Consortium (Dec 2023)</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Leadership & Activities</h2>
+            <div class="project-item">
+                <div class="item-header">
+                    <span class="item-title">Industry Cooperation Department, EE Student Association</span>
+                    <span class="item-date">Sep 2023 – Jun 2025</span>
+                </div>
+                <ul>
+                    <li>Served as a public relations liaison, actively engaging with industry partners for collaboration opportunities</li>
+                    <li>Conducted market surveys by interviewing EECS students and professors to improve industry-academia connection</li>
+                    <li>Led public engagement for the TSMC career Sharing Event and co-directed an alumni interview series</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <div class="item-header">
+                    <span class="item-title">Micron Global Women Mentorship Program 2023</span>
+                    <span class="item-date">Mar 2023 – May 2023</span>
+                </div>
+                <ul>
+                    <li>Selected for mentorship program, participated in weekly discussions with senior Micron engineering mentor</li>
+                    <li>Participated in online cross-cultural exchanges with international students</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
